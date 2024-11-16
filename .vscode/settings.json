@@ -1,0 +1,20 @@
+{
+    "cSpell.ignoreWords": [
+        "DBAPI",
+        "SECREY",
+        "autoflush",
+        "conint",
+        "createposts",
+        "fastapi",
+        "isouter",
+        "ondelete",
+        "passlib",
+        "poolclass",
+        "psycopg",
+        "pydantic",
+        "sessionmaker",
+        "sqlachemy",
+        "sqlalchemy",
+        "sqltypes"
+    ]
+}
