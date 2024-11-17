@@ -6,6 +6,7 @@
         "conint",
         "createposts",
         "fastapi",
+        "gunicorn",
         "isouter",
         "ondelete",
         "passlib",
@@ -15,6 +16,8 @@
         "sessionmaker",
         "sqlachemy",
         "sqlalchemy",
-        "sqltypes"
+        "sqltypes",
+        "uvicorn",
+        "venv"
     ]
 }
