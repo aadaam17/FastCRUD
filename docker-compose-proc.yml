@@ -1,0 +1,38 @@
+# run "docker image ls" to check list of created images
+# run "docker-compose -f docker-compose-proc.yml up -d" to start up
+# run "docker-compose down" to shut it
+# run "docker ps" to check created containers
+# run "docker exec -it fastapi-api-1 bash" to open the bash terminal
+# run "docker image tag {image-name} {repository-url like: aadaam/fastcrud}" this will create a new rep-url image
+# run "docker push {repository-url}"
+
+services:
+  api:
+    image: aadaam/fastcrud
+    depends_on:
+      - postgres
+    ports:
+      - 80:8000
+    # command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    # env_file:
+    #   - ./.env
+    environment:
+      DATABASE_HOSTNAME: ${DATABASE_HOSTNAME}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      SECRET_KEY: ${SECRET_KEY}
+      ALGORITHM: ${ALGORITHM}
+      ACCESS_TOKEN_EXPIRE_MINUTES: ${ACCESS_TOKEN_EXPIRE_MINUTES}
+
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+      - POSTGRES_DB=${DATABASE_NAME}
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+
+volumes:
+  postgres-db:
