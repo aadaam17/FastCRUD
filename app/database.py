@@ -20,7 +20,7 @@ def get_db():
         yield db
     finally:
         db.close()
-        
+
 
 # database connection for raw sql using psycopg
 # while True:

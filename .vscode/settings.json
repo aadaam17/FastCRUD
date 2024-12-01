@@ -18,6 +18,7 @@
         "sqlalchemy",
         "sqltypes",
         "uvicorn",
-        "venv"
+        "venv",
+        "wrongpassword"
     ]
 }
