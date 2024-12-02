@@ -95,7 +95,8 @@ jobs:
         with:
           host: ${{ secrets.PROD_UBUNTU_HOST }}
           username: ${{ secrets.PROD_UBUNTU_USERNAME }}
-          password: ${{ secrets.PROD_UBUNTU_PASSWORD }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          # password: ${{ secrets.PROD_UBUNTU_PASSWORD }}
           # port: ${{ secrets.PORT }}
           script: |
             cd app/src
