@@ -19,7 +19,7 @@ app.add_middleware(
 
 @app.get("/")
 def root():
-    return {"message": "Welcome to the API"}
+    return {"message": "Welcome to the API [Deploying on UBUNTU Server]"}
 
 app.include_router(post.router)
 app.include_router(user.router)
