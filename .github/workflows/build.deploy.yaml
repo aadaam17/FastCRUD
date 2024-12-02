@@ -81,8 +81,8 @@ jobs:
       name: Production
 
     steps:
-      # - name: Pull git repo
-      #   uses: actions/checkout@v4
+      - name: Pull git repo
+        uses: actions/checkout@v4
 
       # - uses: akhileshns/heroku-deploy@v3.13.15
       #   with:
