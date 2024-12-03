@@ -91,7 +91,7 @@ jobs:
       #     heroku_email: ${{ secrets.HEROKU_EMAIL }}
 
       - name: deploy to Ubuntu server
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.PROD_UBUNTU_HOST }}
           username: ${{ secrets.PROD_UBUNTU_USERNAME }}
